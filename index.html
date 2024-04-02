@@ -475,26 +475,27 @@
     
 
 	<script>
-        $(document).ready(function(){
-            // Target date: April 4, 2024
-            var targetDate = new Date(2024, 3, 4);
+		$(document).ready(function () {
+			// Target date: April 4, 2024
+			var targetDate = new Date(2024, 3, 4);
 
-            // Default example
-            simplyCountdown('.simply-countdown-one', {
-                year: targetDate.getFullYear(),
-                month: targetDate.getMonth() + 1,
-                day: targetDate.getDate()
-            });
+			// Default example
+			simplyCountdown('.simply-countdown-one', {
+				year: targetDate.getFullYear(),
+				month: targetDate.getMonth() + 1,
+				day: targetDate.getDate(),
+				enableUtc: false // Make sure to set enableUtc to false if you don't want UTC handling
+			});
 
-            // jQuery example
-            $('#simply-countdown-losange').simplyCountdown({
-                year: targetDate.getFullYear(),
-                month: targetDate.getMonth() + 1,
-                day: targetDate.getDate(),
-                enableUtc: false
-            });
-        });
-        </script>
+			// jQuery example
+			$('#simply-countdown-losange').simplyCountdown({
+				year: targetDate.getFullYear(),
+				month: targetDate.getMonth() + 1,
+				day: targetDate.getDate(),
+				enableUtc: false // Make sure to set enableUtc to false if you don't want UTC handling
+			});
+		});
+	</script>
 
 		<script src="slider.js" defer></script>
 <script>
