@@ -109,15 +109,15 @@
     };
 
     /**
-     * simplyCountdown, create and display the coundtown.
+     * simplyCountdown, create and display the countdown.
      * @param elt
      * @param args (parameters)
      */
     simplyCountdown = function (elt, args) {
         var parameters = extend({
-                year: 2015,
-                month: 6,
-                day: 28,
+                year: 2024,
+                month: 4,
+                day: 4,
                 hours: 0,
                 minutes: 0,
                 seconds: 0,
@@ -125,7 +125,7 @@
                     days: 'day',
                     hours: 'hour',
                     minutes: 'minute',
-                    seconds: 'second',
+                    seconds: 'second', // Added seconds word
                     pluralLetter: 's'
                 },
                 plural: true,
@@ -203,7 +203,7 @@
                     secondsLeft = secondsLeft % 3600;
 
                     minutes = parseInt(secondsLeft / 60, 10);
-                    seconds = parseInt(secondsLeft % 60, 10);
+                    seconds = parseInt(secondsLeft % 60, 10); // Calculate remaining seconds
                 } else {
                     days = 0;
                     hours = 0;
@@ -229,7 +229,6 @@
                     secondWord = seconds > 1
                         ? parameters.words.seconds + parameters.words.pluralLetter
                         : parameters.words.seconds;
-
                 } else {
                     dayWord = parameters.words.days;
                     hourWord = parameters.words.hours;
@@ -237,14 +236,13 @@
                     secondWord = parameters.words.seconds;
                 }
 
-                /* display an inline countdown into a span tag */
+                // Display the countdown
                 if (parameters.inline) {
                     countdown.innerHTML =
                         days + ' ' + dayWord + ', ' +
                         hours + ' ' + hourWord + ', ' +
                         minutes + ' ' + minuteWord + ', ' +
                         seconds + ' ' + secondWord + '.';
-
                 } else {
                     fullCountDown.days.amount.textContent = (parameters.zeroPad && days.toString().length < 2 ? '0' : '') + days;
                     fullCountDown.days.word.textContent = dayWord;

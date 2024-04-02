@@ -310,6 +310,10 @@ h2,h3,h4{
   background-repeat: no-repeat;
   position: relative;
   width: 100%;
+  
+  
+
+
 }
 .fh5co-cover .overlay {
   z-index: 0;
@@ -833,6 +837,8 @@ form label {
   font-weight: normal !important;
 }
 
+
+
 #fh5co-header .display-tc,
 #fh5co-counter .display-tc,
 .fh5co-cover .display-tc {
@@ -1090,7 +1096,7 @@ form label {
 }
 .couple-half .groom img, .couple-half .bride img {
   width: 150px;
-  height: 150px;
+  height: 200px;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
@@ -1859,7 +1865,7 @@ form label {
 .wrapper {
   display: flex;
   max-width: 800px;
-  width: 100%;
+  width: 60%;
   height: 400px;
   background: #fff;
   align-items: center;
@@ -1867,6 +1873,8 @@ form label {
   position: relative;
   border-radius: 12px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px 2px;
 }
 .wrapper i.button {
   position: absolute;
@@ -1894,7 +1902,7 @@ i#next {
   right: 25px;
 }
 .image-container {
-  height: 320px;
+  height: 400px;
   max-width: 500px;
   width: 100%;
   overflow: hidden;
@@ -1913,6 +1921,8 @@ i#next {
   object-fit: cover;
 }
 
+
+
 .google-map {
   position: relative;
   overflow: hidden;
@@ -1920,16 +1930,58 @@ i#next {
   height: 0;
   align-items: center;
   justify-content: center;
-  margin: 60px;
- margin-right: 134px;
+  
 }
 
 .google-map iframe {
   position: absolute;
   top: 0;
   left: 0;
-  width: 80%;
+  width: 100%;
   height: 80%;
   align-items: center;
   justify-self: center;
+}
+
+
+.FRONT-PAGE img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  animation: heartbeat 2s infinite alternate;
+}
+
+@keyframes heartbeat {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}
+
+.contact-person {
+  max-width: 600px; /* Adjust as needed */
+  margin: 0 auto; /* Center horizontally */
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow */
+  text-align: center; /* Center text */
+}
+
+/* Optional: Style for the heading */
+.contact-person h3 {
+  margin-top: 0;
+  font-size: 2rem;
+}
+
+/* Optional: Style for the link */
+.contact-person span a {
+  color: #333;
+  text-decoration: none;
+}
+
+/* Optional: Add hover effect to the link */
+.contact-person span a:hover {
+  text-decoration: underline;
 }
